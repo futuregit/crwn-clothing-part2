@@ -1,10 +1,24 @@
-import Directory from './components/directory/directory.component';
+import Home from "./routes/home/home.component";
+import { Routes, Route } from "react-router-dom";
+import Navigation from "./routes/navigation/navigation.component";
+
+const Shop = () => {
+  return (
+    <h1>Shop</h1>
+  )
+}
 
 function App() {
-  
 
   return (
-    <Directory />
+    <Routes>
+      <Route path="/" element={<Navigation />} >
+        <Route index element={<Home />} />
+        <Route path='shop' element={<Shop />} />
+        <Route path='robot' element={<h1>Robots in disguise</h1>} />
+      </Route>
+    </Routes>
+
   );
 }
 
