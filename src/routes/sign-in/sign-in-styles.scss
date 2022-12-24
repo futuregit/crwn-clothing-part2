@@ -1,0 +1,11 @@
+.container {
+    display: flex;
+    padding: 2px;
+    margin: 5px;
+    align-items: stretch;
+
+    .innerDiv {
+        flex-grow: 1;
+        padding: 25px;
+    }
+}
